@@ -15,7 +15,7 @@ serp_api_key = st.secrets['serp_api_key']
 
 
 st.title("Meeting Reporter")
-st.caption("Writes stories about the important items from a Commission meeting. For a more detailed version visit https://www.fractalsnetwork.com")
+st.caption("Writes stories about the important items from a Commission meeting. NOTE: the video must have a transcript available on YouTube. For a more detailed version visit https://www.fractalsnetwork.com")
 
 
 def get_video_id(url):
