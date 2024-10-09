@@ -15,14 +15,15 @@ serp_api_key = st.secrets['serp_api_key']
 
 
 st.title("Meeting Reporter")
-st.caption("Writes stories about the important items from a Commission meeting. NOTE: the video must have a transcript available on YouTube. For a more detailed version visit https://www.fractalsnetwork.com")
-
+st.header("Writes stories about the important items from a Commission meeting.")
+st.caption("NOTE: the video must have a transcript available on YouTube. For a more detailed version visit https://www.fractalsnetwork.com")
 
 def get_video_id(url):
     return extract.video_id(url)
 
 def get_transcript(video_id):
     transcript = YouTubeTranscriptApi.get_transcript(video_id)
+    print(transcript)
     full_transcript = " ".join([i['text'] for i in transcript])
     return full_transcript
 
