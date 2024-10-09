@@ -5,6 +5,7 @@ from phi.tools.serpapi_tools import SerpApiTools
 from pytube import extract
 import os
 import json
+import requests
 from phi.tools.website import WebsiteTools
 import streamlit as st
 from phi.llm.openai import OpenAIChat
@@ -12,6 +13,8 @@ from youtube_transcript_api import YouTubeTranscriptApi
 
 claude_api_key = st.secrets['claude_api_key']
 serp_api_key = st.secrets['serp_api_key']
+transcript_api_key = st.secrets['transcript_key']
+language_code = "en"
 
 
 st.title("Meeting Reporter")
@@ -22,10 +25,16 @@ def get_video_id(url):
     return extract.video_id(url)
 
 def get_transcript(video_id):
-    transcript = YouTubeTranscriptApi.get_transcript(video_id)
-    print(transcript)
-    full_transcript = " ".join([i['text'] for i in transcript])
-    return full_transcript
+    #transcript = YouTubeTranscriptApi.get_transcript(video_id)
+    url = f"https://codesoclear.replit.app/yt_transcript?video_id={video_id}&lang={language_code}"
+    headers = {
+        'Authorization': 'Bearer ' + transcript_api_key
+    }
+    response = requests.get(url, headers=headers)
+    transcript = response.json()
+    # print(transcript)
+    # full_transcript = " ".join([i['text'] for i in transcript])
+    return transcript
 
 
 if claude_api_key and serp_api_key:
