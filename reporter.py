@@ -17,8 +17,8 @@ transcript_api_key = st.secrets['transcript_key']
 language_code = "en"
 
 
-st.title("Meeting Reporter")
-st.header("Writes stories about the important items from a Commission meeting.")
+st.title("Public Meeting Reporter")
+st.header("Writes stories about the important items from a Public meeting.")
 st.caption("NOTE: the video must have a transcript available on YouTube. For a more detailed version visit https://www.fractalsnetwork.com")
 
 def get_video_id(url):
