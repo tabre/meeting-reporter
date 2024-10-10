@@ -1,12 +1,12 @@
-# Meeting Reporter
+# Public Meeting Reporter
 
 ## Overview
 
-Meeting Reporter is a Streamlit application that generates high-quality news articles based on the transcripts of commission meetings. It uses AI-powered assistants to analyze meeting transcripts, identify important stories, and produce well-structured, informative articles.
+Public Meeting Reporter is a Streamlit application that generates high-quality news articles based on the transcripts of public meetings. It uses AI-powered assistants to analyze meeting transcripts, identify important stories, and produce well-structured, informative articles.
 
 ## Features
 
-- Extracts transcripts from YouTube videos of commission meetings
+- Extracts transcripts from YouTube videos of public meetings
 - Utilizes AI to identify key stories from the meeting
 - Generates headlines and detailed articles for each important topic
 - Performs fact-checking and name verification through web searches
