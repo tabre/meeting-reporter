@@ -1,0 +1,7 @@
+{
+    "title": "Public Meeting Reporter",
+    "header": "Writes stories about the important items from a Public meeting.",
+    "caption": "NOTE: the video must have a transcript available on YouTube. For a more detailed version visit https://www.fractalsnetwork.com",
+    "query_input_label": "Paste the YouTube link for the meeting",
+    "spinner_message": "Writing stories..."
+}
